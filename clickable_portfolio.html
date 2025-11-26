@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        :root {
+            --bg: #f4f4f4;
+            --text: #333;
+            --primary: #4b3aff;
+            --card-bg: #fff;
+            --tag-bg: #e8e6ff;
+        }
+
+        /* Dark Mode Variables */
+        body.dark {
+            --bg: #1a1a1d;
+            --text: #eaeaea;
+            --card-bg: #2a2a2d;
+            --tag-bg: #3b3b5c;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            transition: 0.3s;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 18px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .theme-toggle {
+            margin-left: 15px;
+            padding: 5px 10px;
+            background: white;
+            color: var(--primary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .section {
+            text-align: center;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        /* HERO */
+        #hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .project-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.3s;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(75, 58, 255, 0.4);
+        }
+
+        .project-image {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: var(--tag-bg);
+            border-radius: 8px;
+            font-size: 12px;
+            margin: 3px;
+        }
+
+        /* CONTACT SECTION */
+        .contact-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #352bc9;
+            transform: scale(1.08);
+        }
+
+        /* SOCIAL BUTTONS */
+        .socials a {
+            margin: 10px;
+            font-size: 25px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#hero">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+</nav>
+
+<!-- HERO Section -->
+<section class="section" id="hero">
+    <h1>Hi, I'm Ar Qamar ❤️</h1>
+    <p>Full-Stack Developer | Passionate about building modern Web Apps & Smart Solutions 🚀</p>
+
+    <div class="socials">
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+</section>
+
+<!-- PROJECTS Section -->
+<section class="section" id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-grid">
+
+        <a href="https://arqempire.github.io/website_redirection_with_authentication/" class="project-link" target="_blank">
+            <div class="project-card">
+                <div class="project-image">🌐</div>
+                <h3>University Website Sample</h3>
+                <p>Role-based access: Student, Teacher & Admin dashboards.</p>
+                <span class="tag">React</span><span class="tag">MongoDB</span>
+            </div>
+        </a>
+
+        <a href="https://example.com" class="project-link" target="_blank">
+            <div class="project-card">
+                <div class="project-image">📱</div>
+                <h3>Mobile App UI</h3>
+                <p>Eye-catching Mobile UI built with React Native.</p>
+                <span class="tag">React Native</span><span class="tag">UI/UX</span>
+            </div>
+        </a>
+
+        <a href="https://example.com" class="project-link" target="_blank">
+            <div class="project-card">
+                <div class="project-image">🛒</div>
+                <h3>E-Commerce Store</h3>
+                <p>Payments, Cart System, Authentication and Management.</p>
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<!-- CONTACT Section -->
+<section class="section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Want to work together? Fill the form below 👇</p>
+    <a class="contact-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScUtpApp3bJuGGZzg4p4Q7baAGrQuHdMBiopQIdOhC3oQiPSw/viewform?usp=dialog" target="_blank">Open Contact Form</a>
+</section>
+
+<footer>
+    © 2025 ArQ Portfolio — All Rights Reserved
+</footer>
+
+
+<script>
+    // Smooth Dark Mode Toggle
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+        const btn = document.querySelector(".theme-toggle");
+        btn.textContent = document.body.classList.contains("dark") ? "☀ Light Mode" : "🌙 Dark Mode";
+    }
+</script>
+
+</body>
+</html>
